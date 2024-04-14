@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .clock{
+            width: 99vw;
+            height: 97vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        p{
+            height: 119px;
+            width: 360px;
+            border: 10px solid red;
+            text-align: center;
+            background-color: white;
+            align-content: center;
+            border-radius: 20%;
+            font-weight: bold;
+            color: green;
+             font-size: 58px;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <p id="clock" ></p>
+    </div>
+</body>
+<script>
+    window.onload=function(){
+    setInterval(function(){
+    let time= new Date();
+    let min=time.getMinutes();
+    let h=time.getHours();
+    let s=time.getSeconds()
+    let output=document.getElementById('clock');
+    output.innerText=h+":"+min+":"+s;},1000);};
+</script>
+</html>
