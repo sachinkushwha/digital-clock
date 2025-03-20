@@ -36,10 +36,8 @@
     window.onload=function(){
     setInterval(function(){
     let time= new Date();
-    let min=time.getMinutes();
-    let h=time.getHours();
-    let s=time.getSeconds()
+    let s=time.toLocaleTimeString()
     let output=document.getElementById('clock');
-    output.innerText=h+":"+min+":"+s;},1000);};
+    output.innerText=s;},1000);};
 </script>
 </html>
